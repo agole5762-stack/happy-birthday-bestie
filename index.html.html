@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 18th Birthday ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(-45deg,#ffd6e7,#e6d5ff,#d9f4ff,#fff1c9);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+padding:30px;
+overflow-x:hidden;
+}
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+.card{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.9);
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+h1{text-align:center;color:#ff4f8b;margin-bottom:20px}
+#typewriter{line-height:1.8;min-height:180px;white-space:pre-wrap}
+img{
+display:block;
+margin:20px auto;
+max-width:350px;
+width:100%;
+border-radius:15px;
+}
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#ff4f8b;
+color:white;
+cursor:pointer;
+margin-top:20px;
+}
+.hidden{display:none}
+ol li{margin:10px 0}
+.heart{
+position:fixed;
+bottom:-20px;
+animation:float 10s linear infinite;
+}
+@keyframes float{
+from{transform:translateY(0)}
+to{transform:translateY(-120vh)}
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+<h1>🎂 Happy 18th Birthday 🎂</h1>
+
+<div id="typewriter"></div>
+
+<img src="C:\Users\Admin\Desktop\bithday.html\tickets.jpg.jpeg" alt="PMT Tickets">
+
+<p style="text-align:center;"><b>❤️ The most valuable collection we ever made ❤️</b></p>
+
+<h2 style="margin-top:25px;color:#ff4f8b;">🚌 Our PMT Memories</h2>
+
+<p style="line-height:1.8;margin-top:15px;">
+Most people would see a pile of old bus tickets.<br><br>
+
+I see the place where our friendship grew.<br>
+I see the seat where we spent countless journeys together.<br>
+I see rainy afternoons when the world outside the bus window looked beautiful.<br>
+I see the girl who believed in me when nobody else thought I could score above 90% in my 10th boards.<br>
+I see every fist bump before leaving.<br>
+I see every "Who you?" that somehow became part of our friendship.<br>
+And I see two girls dreaming about becoming financially independent, physically strong, and building a life they're proud of.<br><br>
+
+These tickets may have expired.<br>
+But the memories attached to them never will.
+</p>
+
+<button onclick="reveal()">Open Your Surprise ❤️</button>
+
+<div id="surprise" class="hidden">
+
+<h2 style="margin-top:30px;color:#ff4f8b;">18 Reasons You're Amazing</h2>
+
+<ol>
+<li>Because you believed in me when nobody else believed I could score above 90%.</li>
+<li>Because your confidence in me made me believe in myself.</li>
+<li>Because a PMT bus journey became one of my favorite memories because of you.</li>
+<li>Because rainy bus rides felt magical when we sat together.</li>
+<li>Because you turned ordinary moments into unforgettable memories.</li>
+<li>Because "Who you?" will never stop being funny.</li>
+<li>Because our friendship has its own language.</li>
+<li>Because you always listened.</li>
+<li>Because you never judged me.</li>
+<li>Because you cared about understanding people rather than gossiping about them.</li>
+<li>Because our age difference never stopped our friendship.</li>
+<li>Because every fist bump felt special.</li>
+<li>Because you showed me what genuine friendship looks like.</li>
+<li>Because you stayed true to yourself.</li>
+<li>Because you've been part of important chapters of my life.</li>
+<li>Because we share the dream of becoming financially independent and physically strong women.</li>
+<li>Because your friendship motivates me to keep moving toward that dream.</li>
+<li>Because you're simply you—and that's enough.</li>
+</ol>
+
+<div style="margin-top:40px;">
+<button onclick="showFinalMessage()">🚌 One Last Ticket</button>
+
+<div id="finalMessage" class="hidden" style="margin-top:20px;">
+
+<p style="line-height:2;">
+This is our final ticket for today.<br><br>
+
+Destination?<br><br>
+
+The future.<br><br>
+
+Two girls.<br>
+One dream.<br><br>
+
+To become financially independent.<br>
+To become physically strong.<br>
+To build a life we're proud of.<br><br>
+
+Maybe years from now we'll have different schedules and different lives.<br><br>
+
+But somewhere there will still be a PMT ticket.<br><br>
+
+And we'll remember the bus rides.<br>
+The rain.<br>
+The view from the window.<br>
+The fist bumps.<br>
+And that weird little phrase...<br><br>
+
+"Who you?"<br><br>
+
+Thank you for being one of the best parts of my school life.<br><br>
+
+🤜🤛<br><br>
+
+— Your Closest Friend ❤️
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+const text=`Hi Bestie ❤️
+
+Most people throw away bus tickets.
+
+We collected them.
+
+Not because they were valuable...
+But because the moments attached to them were.
+
+Every PMT ticket on this page carries a memory.
+A conversation.
+A laugh.
+A "Who you?".
+A rainy evening.
+A fist bump before leaving.
+
+And today, on your 18th birthday, I wanted to turn those memories into something you can keep forever.`;
+
+let i=0;
+function typeWriter(){
+if(i<text.length){
+document.getElementById("typewriter").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typeWriter,35);
+}
+}
+typeWriter();
+
+function reveal(){
+document.getElementById("surprise").classList.remove("hidden");
+}
+
+function showFinalMessage(){
+document.getElementById("finalMessage").classList.remove("hidden");
+}
+
+for(let i=0;i<30;i++){
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML=Math.random()>0.5?"💖":"💕";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*20)+"px";
+heart.style.animationDuration=(6+Math.random()*6)+"s";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
